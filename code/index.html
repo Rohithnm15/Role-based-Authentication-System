@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Dashboard</title>
+    <link rel="shortcut icon" href="logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo" title="University Management System">
+            <img src="logo.png" alt="">
+            <h2>GRA<span class="danger">DER</span></h2>
+        </div>
+        <div class="navbar">
+            <a href="index(without login).html" class="active">
+                <span class="material-icons-sharp">home</span>
+                <h3>Home</h3>
+            </a>
+            <a href="timetable.html" onclick="timeTableAll()">
+                <span class="material-icons-sharp"></span>
+                <h3>Time Table</h3>
+            </a> 
+            <a href="Attendance.html" onclick="timeTableAll()">
+                <span class="material-icons-sharp">today</span>
+                <h3>Attendance</h3>
+            </a> 
+            <a href="exam.html">
+                <span class="material-icons-sharp">grid_view</span>
+                <h3>Examination</h3>
+            </a>
+            <a href="index(without login).html">
+                <span class="material-icons-sharp" onclick="">logout</span>
+                <h3>Logout</h3>
+            </a>
+            <a href="contactus.html">
+                <span class="material-icons-sharp" onclick="">contact_support</span>
+                <h3>contact</h3>
+                </a>
+        </div>
+        <div id="profile-btn">
+            <span class="material-icons-sharp">person</span>
+        </div>
+        <div class="theme-toggler">
+            <span class="material-icons-sharp active">light_mode</span>
+            <span class="material-icons-sharp">dark_mode</span>
+        </div>
+        
+    </header>
+    <div class="container">
+        <aside>
+            <div class="profile">
+                <div class="top">
+                    <div class="profile-photo">
+                        <img src="./images/profile-1.jpg" alt="">
+                    </div>
+                    <div class="info">
+                        <p>Hey, <b>Rohit</b> </p>
+                        <small class="text-muted">20H041</small>
+                    </div>
+                </div>
+                <div class="about">
+                    <h5>Course</h5>
+                    <p>BTech. Computer Science and Business Systems</p>
+                    <h5>DOB</h5>
+                    <p>29-Sept-2002</p>
+                    <h5>Contact</h5>
+                    <p>1234567890</p>
+                    <h5>Email</h5>
+                    <p>rohit@gmail.com</p>
+                    <h5>Address</h5>
+                    <p>nm street,kk nagar,Madurai</p>
+                </div>
+            </div>
+        </aside>
+
+        <main>
+            <h1>Attendance</h1>
+            <div class="subjects">
+                <div class="eg">
+                    <span class="material-icons-sharp">computer</span>
+                    <h3>DAA</h3>
+                    <h2>12/14</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>86%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="mth">
+                    <span class="material-icons-sharp">computer</span>
+                    <h3>Compiler Design</h3>
+                    <h2>27/29</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>93%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cs">
+                    <span class="material-icons-sharp">business</span>
+                    <h3>Business Strategy</h3>
+                    <h2>27/30</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>81%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="cg">
+                    <span class="material-icons-sharp">business</span>
+                    <h3>Fundamentals of Management</h3>
+                    <h2>24/25</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>96%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+                <div class="net">
+                    <span class="material-icons-sharp">web</span>
+                    <h3>Modern web</h3>
+                    <h2>25/27</h2>
+                    <div class="progress">
+                        <svg><circle cx="38" cy="38" r="36"></circle></svg>
+                        <div class="number"><p>92%</p></div>
+                    </div>
+                    <small class="text-muted">Last 24 Hours</small>
+                </div>
+            </div>
+
+            <div class="timetable" id="timetable">
+                <div>
+                    <span id="prevDay">&lt;</span>
+                    <h2>Today's Timetable</h2>
+                    <span id="nextDay">&gt;</span>
+                </div>
+                <span class="closeBtn" onclick="timeTableAll()">X</span>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Subject</th>
+                            <th>Course Type</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+
+        <div class="right">
+            <div class="announcements">
+                <h2>Announcements</h2>
+                <div class="updates">
+                    <div class="message">
+                        <p> <b>Academic</b> Summer training internship (Fidelity).</p>
+                        <small class="text-muted">2 Minutes Ago</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="leaves">
+                <h2>Professors</h2>
+                <div class="teacher">
+                    <div class="profile-photo"><img src="./images/profile-2.jpeg" alt=""></div>
+                    <div class="info">
+                        <h3>JANAKIRAMAN</h3>
+                        <small class="text-muted"><b>Subjects handled</b> Business Startegy and Compiler design</small>
+                    </div>
+                </div>
+                </div>
+                
+        </div>
+    </div>
+
+    <script src="timeTable.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
